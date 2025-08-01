@@ -7,7 +7,7 @@ dotenv.config();
 export const signup = async (req, res) => {
   try {
     const { username, email, password } = req.body;
-
+    console.log('Received signup body:', req.body);
     // Check if user already exists
     let existingUser = await User.findOne({email});
     if (existingUser) {
@@ -41,6 +41,7 @@ export const signup = async (req, res) => {
       userId: newUser._id 
     });
   } catch (error) {
+    console.error('Signup error:', error);
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 };
