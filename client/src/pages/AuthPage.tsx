@@ -24,7 +24,7 @@ const AuthPage = () => {
         ? { email, password }
         : { username, email, password };
   
-      const response = await fetch(`https://test-me-wv1b.onrender.com${endpoint}`, {
+      const response = await fetch(`https://test-me-ov0z.onrender.com${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

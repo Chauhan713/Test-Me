@@ -39,7 +39,7 @@ const AnalysisPage = () => {
 
   const fetchTestResult = async () => {
     try {
-      const response = await axios.get(`https://test-me-wv1b.onrender.com/test/getTestResult/${testId}`);
+      const response = await axios.get(`https://test-me-ov0z.onrender.com/test/getTestResult/${testId}`);
       setResults(response.data.results);
       setQuestions(response.data.questions);
       setDifficulty(response.data.difficulty);
